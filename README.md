@@ -1,105 +1,122 @@
-# Data Warehouse and Analytics Project
+# Data Warehouse & Business Analytics Project (SQL)
 
-Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
-This project showcases my end-to-end work on building a modern data warehouse and generating actionable insights — a crucial skillset for Data Analysts and Business Analysts in today’s data-driven industries.
-
-Designed as part of my portfolio while preparing for Data Analyst roles, it demonstrates my ability to handle data engineering, modeling, and analytics tasks using industry-standard best practices.
+A modern data warehouse project designed to transform raw ERP and CRM data into business-ready insights. This project demonstrates how structured data pipelines and modeling can support business reporting, KPI tracking, and decision-making.
 
 ---
+
+## 📊 Project Overview
+
+This project focuses on building an end-to-end data warehouse using Medallion Architecture (Bronze, Silver, Gold) and leveraging it for business analytics.
+
+The goal was to convert raw, unstructured data into a clean, structured, and analytics-ready format to enable insights into customer behavior, product performance, and sales trends.
+
+---
+
+## 🎯 Business Objective
+
+- Consolidate data from multiple sources (ERP & CRM)  
+- Clean and transform raw data for analysis  
+- Build a structured data model for reporting  
+- Enable KPI tracking and business insights  
+- Support data-driven decision-making  
+
+---
+
 ## 🏗️ Data Architecture
 
-The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
-![Data Architecture](docs/data_architecture.png)
+This project follows **Medallion Architecture**:
 
-1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
-2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
-3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
+### 🔹 Bronze Layer (Raw Data)
+- Stores raw data from ERP and CRM systems  
+- No transformation applied  
 
----
-## 📖 Project Overview
+### 🔹 Silver Layer (Cleaned Data)
+- Data cleaning, standardization, and transformation  
+- Prepared for analysis  
 
-This project involves:
-
-1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
-2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
-3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
-4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
-
-🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
-- SQL Development
-- Data Architect
-- Data Engineering  
-- ETL Pipeline Developer  
-- Data Modeling  
-- Data Analytics  
+### 🔹 Gold Layer (Business-Ready Data)
+- Data modeled into **fact and dimension tables**  
+- Optimized for reporting and analytics  
 
 ---
 
-## 🚀 Project Requirements
+## ⚙️ Key Components
 
-### Building the Data Warehouse (Data Engineering)
+### 🔹 ETL Pipeline
+- Extracted data from CSV sources  
+- Transformed and cleaned datasets  
+- Loaded structured data into different layers  
 
-#### Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
+### 🔹 Data Modeling
+- Designed **star schema**  
+- Created:
+  - Customer Dimension  
+  - Product Dimension  
+  - Sales Fact Table  
+- Built summary tables for reporting  
 
-#### Specifications
-- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
-- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
-- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
-- **Scope**: Focus on the latest dataset only; historization of data is not required.
-- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+### 🔹 Analytics & Reporting
+- Performed SQL-based analysis to extract insights  
+- Generated datasets for KPI tracking and dashboards  
+- Supported business use cases like:
+  - Customer segmentation  
+  - Product performance  
+  - Sales trend analysis  
 
 ---
 
-### BI: Analytics & Reporting (Data Analysis)
+## 🛠️ Tools & Technologies
 
-#### Objective
-Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behavior**
-- **Product Performance**
-- **Sales Trends**
+- SQL Server  
+- SQL (Joins, CTEs, Window Functions)  
+- Data Modeling (Star Schema)  
+- ETL Concepts  
 
-These insights empower stakeholders with key business metrics, enabling strategic decision-making. 
+---
 
-## 📂 Repository Structure
-```
+## 📊 Business Insights Enabled
+
+- Identification of high-value customers and segments  
+- Analysis of product performance across categories  
+- Tracking of sales trends over time  
+- Creation of summary tables for reporting and dashboards  
+
+---
+
+## 📂 Project Structure
+
 data-warehouse-project/
 │
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
-│
-├── docs/                               # Project documentation and architecture details
-│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
-│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
-│
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
-│
-├── tests/                              # Test scripts and quality files
-│
-├── README.md                           # Project overview and instructions
-├── LICENSE                             # License information for the repository
-├── .gitignore                          # Files and directories to be ignored by Git
-└── requirements.txt                    # Dependencies and requirements for the project
-```
+├── data/ # Raw and processed datasets
+├── docs/ # Architecture, data models, documentation
+├── scripts/ # SQL scripts (Bronze, Silver, Gold layers)
+├── README.md
+
+
 ---
 
+## 🚀 Business Impact
 
-## 🛡️ License
+- Enables structured reporting and KPI tracking  
+- Supports data-driven business and product decisions  
+- Provides a scalable foundation for BI dashboards  
+- Bridges raw data and business insights  
 
-This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
+---
 
-## 🌟 About Me
+## 🎯 Outcome
 
-Hi, I’m Mehak Mehta — a Business Analyst transitioning into Data Analytics with hands-on skills in SQL, Power BI, Excel, and Data Modeling.
+This project demonstrates the ability to design data pipelines, structure data for analytics, and support business decision-making — making it relevant for **Business Analyst, Product Analyst, and BI Analyst roles**.
 
-This project is part of my journey to strengthen my technical portfolio in Data Analytics by implementing real-world business scenarios like data warehousing, ETL pipelines, and reporting.
+---
 
-I’m passionate about turning raw data into meaningful insights that empower businesses to make better decisions.
-📬 Let’s connect on LinkedIn https://www.linkedin.com/in/mehak-mehta-621714260/
-.
+## 👩‍💼 About Me
+
+Hi, I’m Mehak Mehta — a Business & Product Analyst with hands-on experience in SQL, Power BI, Excel, and Data Modeling.
+
+I enjoy transforming raw data into meaningful insights that drive business decisions.
+
+📬 Let’s connect:  
+https://www.linkedin.com/in/mehak-mehta-621714260/
+
+---
